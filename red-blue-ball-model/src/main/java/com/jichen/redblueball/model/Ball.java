@@ -5,7 +5,7 @@ import com.jichen.redblueball.model.common.BallType;
 
 import java.util.Objects;
 
-public abstract class Ball {
+public abstract class Ball implements Comparable<Ball> {
 
     private int value;
 
@@ -22,6 +22,11 @@ public abstract class Ball {
 
     public BallType getType() {
         return type;
+    }
+
+    @Override
+    public int compareTo(Ball o) {
+        return Integer.compare(this.value, o.getValue());
     }
 
     @Override
