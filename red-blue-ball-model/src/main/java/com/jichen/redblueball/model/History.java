@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.stream.Collectors;
 
 public class History {
 
@@ -144,6 +145,10 @@ public class History {
         return SYMMETRICAL - redBalls.get(index - 1).getValue();
     }
 
+    public int getPrimeCount() {
+        return getRedBallSet().stream().filter(redBall -> isPrime(redBall.getValue())).collect(Collectors.toList()).size();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -175,6 +180,23 @@ public class History {
                 getRed5().getValue(),
                 getRed6().getValue(),
                 getBlueBall().getValue());
+    }
+
+    private boolean isPrime(int n) {
+        if (n < 2) {
+            return false;
+        }
+        if (n == 2) {
+            return true;
+        }
+        if (n % 2 == 0) {
+            return false;
+        }
+        for (int i = 3; i * i <= n; i += 2)
+            if (n % i == 0) {
+                return false;
+            }
+        return true;
     }
 
 }

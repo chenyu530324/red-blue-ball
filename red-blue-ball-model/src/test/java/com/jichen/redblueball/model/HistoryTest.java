@@ -36,4 +36,10 @@ public class HistoryTest {
         assertThat(history.getSymmetricalNumber(5), is(8));
         assertThat(history.getSymmetricalNumber(6), is(5));
     }
+
+    @Test
+    public void couldReturnPrimeCountWhenGivenAHistory() {
+        History history = aHistory().withRedBalls(2, 4, 8, 23, 26, 29).withBlueBall(16).withNumber(2017003).build();
+        assertThat(history.getPrimeCount(), is(3));
+    }
 }
