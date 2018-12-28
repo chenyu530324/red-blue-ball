@@ -1,9 +1,12 @@
 package com.jichen.redblueball.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class History {
 
@@ -85,7 +88,7 @@ public class History {
 
     public Set<RedBall> getRedBallSet() {
         if (null == this.redBallSet) {
-            this.redBallSet = new HashSet<>();
+            this.redBallSet = new TreeSet<>();
             this.redBallSet.add(red1);
             this.redBallSet.add(red2);
             this.redBallSet.add(red3);
@@ -153,4 +156,18 @@ public class History {
                 getBlueBall().getValue());
     }
 
+    public int getACValue() {
+        Set<Integer> differValues = new HashSet<>();
+        List<RedBall> redBalls = new ArrayList<>(getRedBallSet());
+        for (int i = 1; i < redBalls.size(); i++) {
+            for (int j = 0; j < redBalls.size() - 1; j++) {
+                if (j >= i) {
+                    continue;
+                }
+                int differ = redBalls.get(i).getValue() - redBalls.get(j).getValue();
+                differValues.add(differ);
+            }
+        }
+        return differValues.size() - (redBalls.size() - 1);
+    }
 }
