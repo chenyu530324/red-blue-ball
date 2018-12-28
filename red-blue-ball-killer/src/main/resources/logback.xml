@@ -3,7 +3,7 @@
     <property name="project.name" value="killer"/>
     <appender name="FILE_APPEND" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>../logs/${project.name}_%d{yyyy-MM-dd}.log</FileNamePattern>
+            <FileNamePattern>./logs/${project.name}_%d{yyyy-MM-dd}.log</FileNamePattern>
         </rollingPolicy>
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>DEBUG</level>
