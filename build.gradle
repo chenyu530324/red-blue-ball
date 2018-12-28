@@ -1,0 +1,21 @@
+allprojects {
+    repositories {
+        mavenCentral()
+        maven { url "https://repo.spring.io/snapshot" }
+        maven { url "https://repo.spring.io/milestone" }
+        maven { url "https://repo1.maven.org/maven2/" }
+    }
+
+    apply plugin: 'idea'
+}
+
+subprojects {
+    group 'com.jichen.redblueball'
+    version '1.0-SNAPSHOT'
+    apply plugin: 'java'
+    apply from: "../plugin/findbugs.gradle"
+    apply from: "../plugin/checkstyle.gradle"
+    apply from: "../plugin/jacoco.gradle"
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
