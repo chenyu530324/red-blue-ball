@@ -2,7 +2,7 @@
 ---
 
 ##### Rule1  
-蓝球和值71，则杀7+1=08，所以杀红08
+红球和值71，则杀7+1=08，所以杀红08
 
 * 备注：<https://jingyan.baidu.com/article/f3ad7d0ffdd71b09c3345b9f.html>
 
@@ -36,7 +36,7 @@
 
 -
 ##### Rule9
-红球之和的和杀下期红球
+上期尾号之和杀下期红号
 
 -
 ##### Rule10
@@ -69,10 +69,6 @@ AC值－红球第6个＝杀下期红球
 -
 ##### Rule17
 前20期内红球出号次数组合之和＝杀下期红球
-
--
-##### Rule18
-上期尾号之和杀下期红号
 
 * PS: rule2~rule18 from <https://shuangseqiu.cjcp.com.cn/jiqiao/2018/0928/5159644.html>
 
