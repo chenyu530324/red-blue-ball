@@ -75,8 +75,7 @@ page at http://checkstyle.sourceforge.net/config.html -->
         <module name="EmptyStatement"/>
         <module name="EqualsHashCode"/>
         <module name="HiddenField">
-            <property name="ignoreConstructorParameter" value="true"/>
-            <property name="ignoreSetter" value="true"/>
+            <property name="tokens" value="VARIABLE_DEF"/>
         </module>
         <module name="IllegalInstantiation">
             <property name="classes" value="java.lang.Boolean,java.lang,String"/>

@@ -31,6 +31,7 @@ class ClassScannerService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ClassScannerService.class);
     private static final String DEFAULT_RESOURCE_PATTERN = "**/*.class";
+    private static final boolean DEBUG_ENABLED = LOGGER.isDebugEnabled();
 
     @Value("${base.package.name}")
     private String basePackage;
@@ -103,7 +104,7 @@ class ClassScannerService {
             LOGGER.info(format("Count file size is %s", fileList.size()));
         }
         List<Class> classList = convertFileToClasses(fileList);
-        if (infoEnabled) {
+        if (DEBUG_ENABLED) {
             classList.forEach(aClass -> LOGGER.info(format("Identified class %s", aClass.getName())));
         }
         return classList;
