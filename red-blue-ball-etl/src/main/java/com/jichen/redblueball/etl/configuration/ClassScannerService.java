@@ -1,4 +1,4 @@
-package com.jichen.redblueball.etl.service;
+package com.jichen.redblueball.etl.configuration;
 
 import com.jichen.redblueball.model.annotations.Etl;
 import com.jichen.redblueball.model.annotations.Killer;
@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.ResourcePatternResolver;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 
@@ -26,8 +26,8 @@ import static java.util.stream.Collectors.toList;
 import static org.springframework.core.io.support.ResourcePatternResolver.CLASSPATH_ALL_URL_PREFIX;
 import static org.springframework.util.ClassUtils.CLASS_FILE_SUFFIX;
 
-@Service
-class ClassScannerService {
+@Component
+public class ClassScannerService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ClassScannerService.class);
     private static final String DEFAULT_RESOURCE_PATTERN = "**/*.class";

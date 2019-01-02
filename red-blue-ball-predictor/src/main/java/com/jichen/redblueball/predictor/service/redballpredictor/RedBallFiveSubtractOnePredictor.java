@@ -13,7 +13,7 @@ import static com.jichen.redblueball.model.common.BallType.RED;
 import static java.util.Collections.singleton;
 
 @Component
-@Predictor(name = "redBallFiveSubtractOne", type = RED)
+@Predictor(name = "redBallFiveSubtractOnePredictor", type = RED)
 public class RedBallFiveSubtractOnePredictor implements PredictService<History> {
 
     @Override
