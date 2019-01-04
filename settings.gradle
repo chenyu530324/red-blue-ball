@@ -8,4 +8,4 @@
  */
 
 rootProject.name = 'red-blue-ball'
-include 'red-blue-ball-model','red-blue-ball-importer','red-blue-ball-etl','red-blue-ball-killer','red-blue-ball-predictor'
+include 'red-blue-ball-common','red-blue-ball-importer','red-blue-ball-etl','red-blue-ball-killer','red-blue-ball-predictor'

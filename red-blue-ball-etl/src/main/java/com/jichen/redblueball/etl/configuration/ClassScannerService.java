@@ -1,8 +1,8 @@
 package com.jichen.redblueball.etl.configuration;
 
-import com.jichen.redblueball.model.annotations.Etl;
-import com.jichen.redblueball.model.annotations.Killer;
-import com.jichen.redblueball.model.annotations.Predictor;
+import com.jichen.redblueball.common.annotations.Etl;
+import com.jichen.redblueball.common.annotations.Killer;
+import com.jichen.redblueball.common.annotations.Predictor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

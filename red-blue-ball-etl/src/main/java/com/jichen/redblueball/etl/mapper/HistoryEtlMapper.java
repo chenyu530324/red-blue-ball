@@ -1,7 +1,7 @@
 package com.jichen.redblueball.etl.mapper;
 
-import com.jichen.redblueball.model.History;
-import com.jichen.redblueball.model.HistorySum;
+import com.jichen.redblueball.common.model.History;
+import com.jichen.redblueball.common.model.HistorySum;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;

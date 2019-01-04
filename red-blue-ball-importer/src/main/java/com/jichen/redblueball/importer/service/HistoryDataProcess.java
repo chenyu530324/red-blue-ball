@@ -1,6 +1,6 @@
 package com.jichen.redblueball.importer.service;
 
-import com.jichen.redblueball.model.History;
+import com.jichen.redblueball.common.model.History;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -14,8 +14,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-import static com.jichen.redblueball.model.common.BallFactory.createBlueBall;
-import static com.jichen.redblueball.model.common.BallFactory.createRedBall;
+import static com.jichen.redblueball.common.BallFactory.createBlueBall;
+import static com.jichen.redblueball.common.BallFactory.createRedBall;
 
 
 @Component

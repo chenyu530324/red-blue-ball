@@ -1,11 +1,11 @@
 package com.jichen.redblueball.importer.service;
 
-import com.jichen.redblueball.model.History;
+import com.jichen.redblueball.common.model.History;
 import org.junit.Test;
 
 import java.util.List;
 
-import static com.jichen.redblueball.model.common.HistoryBuilder.aHistory;
+import static com.jichen.redblueball.common.HistoryBuilder.aHistory;
 import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
 import static org.hamcrest.core.Is.is;

@@ -1,4 +1,4 @@
-package com.jichen.redblueball.model;
+package com.jichen.redblueball.common.model;
 
 import java.util.ArrayList;
 import java.util.Date;

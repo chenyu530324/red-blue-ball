@@ -1,7 +1,7 @@
 package com.jichen.redblueball.importer.service;
 
 import com.jichen.redblueball.importer.mapper.HistoryMapper;
-import com.jichen.redblueball.model.History;
+import com.jichen.redblueball.common.model.History;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

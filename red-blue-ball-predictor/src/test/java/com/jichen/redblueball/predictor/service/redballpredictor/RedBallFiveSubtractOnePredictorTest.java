@@ -1,10 +1,10 @@
 package com.jichen.redblueball.predictor.service.redballpredictor;
 
-import com.jichen.redblueball.model.History;
+import com.jichen.redblueball.common.model.History;
 import org.junit.Test;
 
-import static com.jichen.redblueball.model.common.BallFactory.createRedBall;
-import static com.jichen.redblueball.model.common.HistoryBuilder.aHistory;
+import static com.jichen.redblueball.common.BallFactory.createRedBall;
+import static com.jichen.redblueball.common.HistoryBuilder.aHistory;
 import static java.util.Collections.singleton;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.Is.is;

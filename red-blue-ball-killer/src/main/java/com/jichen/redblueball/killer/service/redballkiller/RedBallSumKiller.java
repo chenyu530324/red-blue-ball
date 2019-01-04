@@ -1,13 +1,13 @@
 package com.jichen.redblueball.killer.service.redballkiller;
 
 import com.jichen.redblueball.killer.service.KillerService;
-import com.jichen.redblueball.model.Ball;
-import com.jichen.redblueball.model.History;
+import com.jichen.redblueball.common.model.Ball;
+import com.jichen.redblueball.common.model.History;
 import org.springframework.stereotype.Component;
 
 import java.util.Set;
 
-import static com.jichen.redblueball.model.common.BallFactory.createRedBall;
+import static com.jichen.redblueball.common.BallFactory.createRedBall;
 import static java.util.Collections.singleton;
 
 @Component

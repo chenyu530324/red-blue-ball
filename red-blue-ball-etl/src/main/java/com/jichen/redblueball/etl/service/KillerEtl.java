@@ -1,8 +1,8 @@
 package com.jichen.redblueball.etl.service;
 
 import com.jichen.redblueball.etl.configuration.ClassScannerService;
-import com.jichen.redblueball.model.History;
-import com.jichen.redblueball.model.annotations.Killer;
+import com.jichen.redblueball.common.model.History;
+import com.jichen.redblueball.common.annotations.Killer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

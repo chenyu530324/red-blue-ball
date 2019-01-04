@@ -1,6 +1,6 @@
-package com.jichen.redblueball.model.annotations;
+package com.jichen.redblueball.common.annotations;
 
-import com.jichen.redblueball.model.common.BallType;
+import com.jichen.redblueball.common.BallType;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Killer {
+public @interface Predictor {
 
     String name();
 

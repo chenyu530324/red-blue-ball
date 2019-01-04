@@ -1,4 +1,4 @@
-package com.jichen.redblueball.model.annotations;
+package com.jichen.redblueball.common.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

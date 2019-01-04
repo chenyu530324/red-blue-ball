@@ -1,8 +1,8 @@
 package com.jichen.redblueball.etl.service;
 
 import com.jichen.redblueball.etl.mapper.HistoryEtlMapper;
-import com.jichen.redblueball.model.History;
-import com.jichen.redblueball.model.HistorySum;
+import com.jichen.redblueball.common.model.History;
+import com.jichen.redblueball.common.model.HistorySum;
 import org.easymock.EasyMockRunner;
 import org.easymock.EasyMockSupport;
 import org.easymock.Mock;
@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 
 import java.util.List;
 
-import static com.jichen.redblueball.model.common.HistoryBuilder.aHistory;
+import static com.jichen.redblueball.common.HistoryBuilder.aHistory;
 import static java.util.Collections.singletonList;
 import static org.easymock.EasyMock.expectLastCall;
 

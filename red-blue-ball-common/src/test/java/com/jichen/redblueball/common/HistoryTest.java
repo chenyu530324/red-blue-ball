@@ -1,8 +1,9 @@
-package com.jichen.redblueball.model;
+package com.jichen.redblueball.common;
 
+import com.jichen.redblueball.common.model.History;
 import org.junit.Test;
 
-import static com.jichen.redblueball.model.common.HistoryBuilder.aHistory;
+import static com.jichen.redblueball.common.HistoryBuilder.aHistory;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 

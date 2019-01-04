@@ -1,7 +1,7 @@
-package com.jichen.redblueball.model.common;
+package com.jichen.redblueball.common;
 
-import com.jichen.redblueball.model.BlueBall;
-import com.jichen.redblueball.model.RedBall;
+import com.jichen.redblueball.common.model.BlueBall;
+import com.jichen.redblueball.common.model.RedBall;
 
 public final class BallFactory {
 

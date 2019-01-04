@@ -21,7 +21,7 @@ mainClassName = 'com.jiechen.redblueball.etl.Application'
 
 //compile,runtime,testCompile,testRuntime
 dependencies {
-    compile project(":red-blue-ball-model")
+    compile project(":red-blue-ball-common")
     compile project(":red-blue-ball-killer")
     compile project(":red-blue-ball-predictor")
 

@@ -1,14 +1,14 @@
-package com.jichen.redblueball.model.common;
+package com.jichen.redblueball.common;
 
-import com.jichen.redblueball.model.History;
+import com.jichen.redblueball.common.model.History;
 
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static com.jichen.redblueball.model.common.BallFactory.createBlueBall;
-import static com.jichen.redblueball.model.common.BallFactory.createRedBall;
+import static com.jichen.redblueball.common.BallFactory.createBlueBall;
+import static com.jichen.redblueball.common.BallFactory.createRedBall;
 
 
 public final class HistoryBuilder {

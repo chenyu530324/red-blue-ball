@@ -1,6 +1,6 @@
 package com.jichen.redblueball.importer.service;
 
-import com.jichen.redblueball.model.History;
+import com.jichen.redblueball.common.model.History;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

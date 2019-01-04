@@ -1,6 +1,6 @@
 package com.jichen.redblueball.importer.mapper;
 
-import com.jichen.redblueball.model.History;
+import com.jichen.redblueball.common.model.History;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 

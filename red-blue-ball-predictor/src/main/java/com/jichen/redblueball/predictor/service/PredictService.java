@@ -1,7 +1,7 @@
 package com.jichen.redblueball.predictor.service;
 
 
-import com.jichen.redblueball.model.Ball;
+import com.jichen.redblueball.common.model.Ball;
 
 import java.util.Set;
 

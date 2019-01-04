@@ -1,7 +1,7 @@
-package com.jichen.redblueball.model;
+package com.jichen.redblueball.common.model;
 
 
-import com.jichen.redblueball.model.common.BallType;
+import com.jichen.redblueball.common.BallType;
 
 import java.util.Objects;
 

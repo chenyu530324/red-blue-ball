@@ -1,7 +1,7 @@
 package com.jichen.redblueball.etl.service;
 
 
-import com.jichen.redblueball.model.History;
+import com.jichen.redblueball.common.model.History;
 
 import java.util.List;
 
