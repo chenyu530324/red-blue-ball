@@ -1,8 +1,6 @@
 package com.jichen.redblueball.importer.service;
 
-import com.jichen.redblueball.common.model.BlueBall;
 import com.jichen.redblueball.common.model.History;
-import com.jichen.redblueball.common.model.RedBall;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -35,13 +33,13 @@ public class HistoryDataProcess {
         history.setNumber(getNumber(data));
         String redBalls = getRegexString(data, RED_BALLS_REGEX);
         String[] redBallArray = redBalls.split(RED_BALLS_SPLITTER);
-        history.setRed1(new RedBall(Integer.parseInt(redBallArray[0])));
-        history.setRed2(new RedBall(Integer.parseInt(redBallArray[1])));
-        history.setRed3(new RedBall(Integer.parseInt(redBallArray[2])));
-        history.setRed4(new RedBall(Integer.parseInt(redBallArray[3])));
-        history.setRed5(new RedBall(Integer.parseInt(redBallArray[4])));
-        history.setRed6(new RedBall(Integer.parseInt(redBallArray[5])));
-        history.setBlueBall(new BlueBall(getBlueBallNumber(data)));
+        history.setRed1(Integer.parseInt(redBallArray[0]));
+        history.setRed2(Integer.parseInt(redBallArray[1]));
+        history.setRed3(Integer.parseInt(redBallArray[2]));
+        history.setRed4(Integer.parseInt(redBallArray[3]));
+        history.setRed5(Integer.parseInt(redBallArray[4]));
+        history.setRed6(Integer.parseInt(redBallArray[5]));
+        history.setBlueBall(getBlueBallNumber(data));
         try {
             history.setDate(getDate(data));
         } catch (Exception e) {

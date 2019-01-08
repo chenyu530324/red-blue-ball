@@ -1,9 +1,7 @@
 package com.jichen.redblueball.predictor.service.redballpredictor;
 
 import com.jichen.redblueball.common.annotations.Predictor;
-import com.jichen.redblueball.common.model.Ball;
 import com.jichen.redblueball.common.model.History;
-import com.jichen.redblueball.common.model.RedBall;
 import com.jichen.redblueball.predictor.service.PredictService;
 import org.springframework.stereotype.Component;
 
@@ -17,8 +15,8 @@ import static java.util.Collections.singleton;
 public class RedBallFiveSubtractOnePredictor implements PredictService<History> {
 
     @Override
-    public Set<Ball> predict(History history) {
-        Ball ball = new RedBall(history.getRed5().getValue() - history.getRed1().getValue());
+    public Set<Integer> predict(History history) {
+        Integer ball = history.getRed5() - history.getRed1();
         return singleton(ball);
     }
 }

@@ -1,8 +1,6 @@
 package com.jichen.redblueball.common;
 
-import com.jichen.redblueball.common.model.BlueBall;
 import com.jichen.redblueball.common.model.History;
-import com.jichen.redblueball.common.model.RedBall;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -60,13 +58,13 @@ public final class HistoryBuilder {
 
     public History build() {
         History history = new History();
-        history.setRed1(new RedBall(red1));
-        history.setRed2(new RedBall(red2));
-        history.setRed3(new RedBall(red3));
-        history.setRed4(new RedBall(red4));
-        history.setRed5(new RedBall(red5));
-        history.setRed6(new RedBall(red6));
-        history.setBlueBall(new BlueBall(blueBall));
+        history.setRed1(red1);
+        history.setRed2(red2);
+        history.setRed3(red3);
+        history.setRed4(red4);
+        history.setRed5(red5);
+        history.setRed6(red6);
+        history.setBlueBall(blueBall);
         history.setNumber(this.number);
         history.setDate(this.date);
         return history;

@@ -1,7 +1,6 @@
 package com.jichen.redblueball.predictor.service.redballpredictor;
 
 import com.jichen.redblueball.common.model.History;
-import com.jichen.redblueball.common.model.RedBall;
 import org.junit.Test;
 
 import static com.jichen.redblueball.common.HistoryBuilder.aHistory;
@@ -15,6 +14,6 @@ public class RedBallFiveSubtractOnePredictorTest {
     public void couldPredictRedBallWhenGivenHistory() {
         RedBallFiveSubtractOnePredictor predictor = new RedBallFiveSubtractOnePredictor();
         History history = aHistory().withRedBalls(3, 6, 12, 19, 30, 31).withBlueBall(13).build();
-        assertThat(predictor.predict(history), is(singleton(new RedBall(27))));
+        assertThat(predictor.predict(history), is(singleton(27)));
     }
 }

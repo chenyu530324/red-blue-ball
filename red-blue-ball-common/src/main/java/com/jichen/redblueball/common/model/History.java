@@ -16,89 +16,89 @@ public class History {
 
     private Date date;
 
-    private RedBall red1;
+    private int red1;
 
-    private RedBall red2;
+    private int red2;
 
-    private RedBall red3;
+    private int red3;
 
-    private RedBall red4;
+    private int red4;
 
-    private RedBall red5;
+    private int red5;
 
-    private RedBall red6;
+    private int red6;
 
-    private BlueBall blueBall;
+    private int blueBall;
 
-    private Set<RedBall> redBallSet;
+    private Set<Integer> intSet;
 
-    public void setRed1(RedBall red1) {
+    public void setRed1(int red1) {
         this.red1 = red1;
     }
 
-    public void setRed2(RedBall red2) {
+    public void setRed2(int red2) {
         this.red2 = red2;
     }
 
-    public void setRed3(RedBall red3) {
+    public void setRed3(int red3) {
         this.red3 = red3;
     }
 
-    public void setRed4(RedBall red4) {
+    public void setRed4(int red4) {
         this.red4 = red4;
     }
 
-    public void setRed5(RedBall red5) {
+    public void setRed5(int red5) {
         this.red5 = red5;
     }
 
-    public void setRed6(RedBall red6) {
+    public void setRed6(int red6) {
         this.red6 = red6;
     }
 
-    public void setBlueBall(BlueBall blueBall) {
+    public void setBlueBall(Integer blueBall) {
         this.blueBall = blueBall;
     }
 
-    public RedBall getRed1() {
+    public int getRed1() {
         return red1;
     }
 
-    public RedBall getRed2() {
+    public int getRed2() {
         return red2;
     }
 
-    public RedBall getRed3() {
+    public int getRed3() {
         return red3;
     }
 
-    public RedBall getRed4() {
+    public int getRed4() {
         return red4;
     }
 
-    public RedBall getRed5() {
+    public int getRed5() {
         return red5;
     }
 
-    public RedBall getRed6() {
+    public int getRed6() {
         return red6;
     }
 
-    public BlueBall getBlueBall() {
+    public int getBlueBall() {
         return blueBall;
     }
 
-    public Set<RedBall> getRedBallSet() {
-        if (null == this.redBallSet) {
-            this.redBallSet = new TreeSet<>();
-            this.redBallSet.add(red1);
-            this.redBallSet.add(red2);
-            this.redBallSet.add(red3);
-            this.redBallSet.add(red4);
-            this.redBallSet.add(red5);
-            this.redBallSet.add(red6);
+    public Set<Integer> getRedBallSet() {
+        if (null == this.intSet) {
+            this.intSet = new TreeSet<>();
+            this.intSet.add(red1);
+            this.intSet.add(red2);
+            this.intSet.add(red3);
+            this.intSet.add(red4);
+            this.intSet.add(red5);
+            this.intSet.add(red6);
         }
-        return redBallSet;
+        return intSet;
     }
 
     public int getNumber() {
@@ -118,35 +118,35 @@ public class History {
     }
 
     public int getRedBallSum() {
-        return getRedBallSet().stream().mapToInt(Ball::getValue).sum();
+        return getRedBallSet().stream().mapToInt(Integer::intValue).sum();
     }
 
     public int getSum() {
-        return getRedBallSum() + getBlueBall().getValue();
+        return getRedBallSum() + getBlueBall();
     }
 
     public int getACValue() {
         Set<Integer> differValues = new HashSet<>();
-        List<RedBall> redBalls = new ArrayList<>(getRedBallSet());
-        for (int i = 1; i < redBalls.size(); i++) {
-            for (int j = 0; j < redBalls.size() - 1; j++) {
+        List<Integer> ints = new ArrayList<>(getRedBallSet());
+        for (int i = 1; i < ints.size(); i++) {
+            for (int j = 0; j < ints.size() - 1; j++) {
                 if (j >= i) {
                     continue;
                 }
-                int differ = redBalls.get(i).getValue() - redBalls.get(j).getValue();
+                int differ = ints.get(i) - ints.get(j);
                 differValues.add(differ);
             }
         }
-        return differValues.size() - (redBalls.size() - 1);
+        return differValues.size() - (ints.size() - 1);
     }
 
     public int getSymmetricalNumber(int index) {
-        List<RedBall> redBalls = new ArrayList<>(getRedBallSet());
-        return SYMMETRICAL - redBalls.get(index - 1).getValue();
+        List<Integer> ints = new ArrayList<>(getRedBallSet());
+        return SYMMETRICAL - ints.get(index - 1);
     }
 
     public int getPrimeCount() {
-        return getRedBallSet().stream().filter(redBall -> isPrime(redBall.getValue())).collect(Collectors.toList()).size();
+        return getRedBallSet().stream().filter(this::isPrime).collect(Collectors.toList()).size();
     }
 
     @Override
@@ -159,13 +159,13 @@ public class History {
         }
         History history = (History) o;
         return getNumber() == history.getNumber()
-                && getRed1().getValue() == history.getRed1().getValue()
-                && getRed2().getValue() == history.getRed2().getValue()
-                && getRed3().getValue() == history.getRed3().getValue()
-                && getRed4().getValue() == history.getRed4().getValue()
-                && getRed5().getValue() == history.getRed5().getValue()
-                && getRed6().getValue() == history.getRed6().getValue()
-                && getBlueBall().getValue() == history.getBlueBall().getValue()
+                && getRed1() == history.getRed1()
+                && getRed2() == history.getRed2()
+                && getRed3() == history.getRed3()
+                && getRed4() == history.getRed4()
+                && getRed5() == history.getRed5()
+                && getRed6() == history.getRed6()
+                && getBlueBall() == history.getBlueBall()
                 && Objects.equals(getDate(), history.getDate());
     }
 
@@ -173,13 +173,13 @@ public class History {
     public int hashCode() {
         return Objects.hash(getNumber(),
                 getDate(),
-                getRed1().getValue(),
-                getRed2().getValue(),
-                getRed3().getValue(),
-                getRed4().getValue(),
-                getRed5().getValue(),
-                getRed6().getValue(),
-                getBlueBall().getValue());
+                getRed1(),
+                getRed2(),
+                getRed3(),
+                getRed4(),
+                getRed5(),
+                getRed6(),
+                getBlueBall());
     }
 
     private boolean isPrime(int n) {
