@@ -1,12 +1,11 @@
 package com.jichen.redblueball.etl.service.history;
 
 import com.jichen.redblueball.common.annotations.Etl;
-import com.jichen.redblueball.etl.mapper.HistoryEtlMapper;
 import com.jichen.redblueball.common.model.History;
 import com.jichen.redblueball.common.model.HistorySum;
+import com.jichen.redblueball.etl.mapper.HistoryEtlMapper;
 import com.jichen.redblueball.etl.service.HistoryEtlService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
