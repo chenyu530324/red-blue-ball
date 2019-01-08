@@ -1,6 +1,5 @@
 package com.jichen.redblueball.etl.configuration;
 
-import com.jichen.redblueball.common.annotations.Etl;
 import com.jichen.redblueball.common.annotations.Killer;
 import com.jichen.redblueball.common.annotations.Predictor;
 import org.slf4j.Logger;
@@ -53,22 +52,6 @@ public class ClassScannerService {
             return null;
         }
         return classList.stream().map(this::getPredictAnnotation).filter(Objects::nonNull).collect(toList());
-    }
-
-    public List<Etl> scanEtls() {
-        List<Class> classList = identifyAllClasses();
-        if (null == classList) {
-            return null;
-        }
-        return classList.stream().map(this::getEtlAnnotation).filter(Objects::nonNull).collect(toList());
-    }
-
-    private Etl getEtlAnnotation(Class aClass) {
-        Annotation annotation = aClass.getAnnotation(Etl.class);
-        if (null != annotation) {
-            return AnnotationUtils.getAnnotation(annotation, Etl.class);
-        }
-        return null;
     }
 
     private Predictor getPredictAnnotation(Class aClass) {

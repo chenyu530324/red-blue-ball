@@ -16,7 +16,7 @@ import static org.springframework.test.util.ReflectionTestUtils.setField;
 public class HistoryDataReaderTest {
 
     private HistoryDataReader reader = new HistoryDataReader();
-    private String historyDataLocalDirectory = "/Users/jichen/workspace/github/red-blue-ball/history-data";
+    private String historyDataLocalDirectory = "/Users/jichen/workspace/red-blue-ball/history-data";
     private String historyDataFileName = "ssqtxt_result";
     private String historyDataFileSuffix = ".txt";
 

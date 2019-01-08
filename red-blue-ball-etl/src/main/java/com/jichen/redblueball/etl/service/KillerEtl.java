@@ -17,6 +17,7 @@ public class KillerEtl implements HistoryEtlService {
     @Override
     public boolean etl(List<History> historyList) {
         List<Killer> killerList = classScannerService.scanKillers();
+
         return true;
     }
 
