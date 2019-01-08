@@ -1,6 +1,7 @@
 package com.jichen.redblueball.etl.service;
 
 import com.jichen.redblueball.etl.configuration.ClassScannerService;
+import com.jichen.redblueball.etl.service.killer.KillerEtl;
 import org.easymock.EasyMockRunner;
 import org.easymock.EasyMockSupport;
 import org.easymock.Mock;

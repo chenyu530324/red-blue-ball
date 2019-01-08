@@ -1,16 +1,20 @@
-package com.jichen.redblueball.etl.service;
+package com.jichen.redblueball.etl.service.history;
 
+import com.jichen.redblueball.common.annotations.Etl;
 import com.jichen.redblueball.etl.mapper.HistoryEtlMapper;
 import com.jichen.redblueball.common.model.History;
 import com.jichen.redblueball.common.model.HistorySum;
+import com.jichen.redblueball.etl.service.HistoryEtlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
-@Component
+@Service
+@Etl(name = "historySumEtl")
 public class HistorySumEtl implements HistoryEtlService {
 
     @Autowired
