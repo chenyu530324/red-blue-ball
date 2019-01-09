@@ -1,5 +1,7 @@
 package com.jichen.redblueball.common.model;
 
+import com.jichen.redblueball.common.BallType;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
@@ -8,6 +10,8 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
+
+import static com.jichen.redblueball.common.BallType.RED;
 
 public class History {
 
@@ -28,7 +32,7 @@ public class History {
 
     private int red6;
 
-    private int blueBall;
+    private int blue;
 
     private Set<Integer> intSet;
 
@@ -56,8 +60,8 @@ public class History {
         this.red6 = red6;
     }
 
-    public void setBlueBall(Integer blueBall) {
-        this.blueBall = blueBall;
+    public void setBlue(Integer blue) {
+        this.blue = blue;
     }
 
     public int getRed1() {
@@ -84,8 +88,8 @@ public class History {
         return red6;
     }
 
-    public int getBlueBall() {
-        return blueBall;
+    public int getBlue() {
+        return blue;
     }
 
     public Set<Integer> getRedBallSet() {
@@ -122,7 +126,7 @@ public class History {
     }
 
     public int getSum() {
-        return getRedBallSum() + getBlueBall();
+        return getRedBallSum() + getBlue();
     }
 
     public int getACValue() {
@@ -149,6 +153,23 @@ public class History {
         return getRedBallSet().stream().filter(this::isPrime).collect(Collectors.toList()).size();
     }
 
+    public boolean notExistBalls(BallType type, Set<Integer> killNumbers) {
+        if (RED == type) {
+            for (Integer killNumber : killNumbers) {
+                if (this.getRedBallSet().contains(killNumber)) {
+                    return false;
+                }
+            }
+        } else {
+            for (Integer killNumber : killNumbers) {
+                if (this.getBlue() == killNumber) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -165,7 +186,7 @@ public class History {
                 && getRed4() == history.getRed4()
                 && getRed5() == history.getRed5()
                 && getRed6() == history.getRed6()
-                && getBlueBall() == history.getBlueBall()
+                && getBlue() == history.getBlue()
                 && Objects.equals(getDate(), history.getDate());
     }
 
@@ -179,7 +200,18 @@ public class History {
                 getRed4(),
                 getRed5(),
                 getRed6(),
-                getBlueBall());
+                getBlue());
+    }
+
+    @Override
+    public String toString() {
+        return red1 + " "
+                + red2 + " "
+                + red3 + " "
+                + red4 + " "
+                + red5 + " "
+                + red6 + " "
+                + blue;
     }
 
     private boolean isPrime(int n) {
@@ -199,5 +231,4 @@ public class History {
         }
         return true;
     }
-
 }

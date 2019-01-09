@@ -1,13 +1,13 @@
 #RED BALL Killer
 ---
 
-##### Rule1  
+##### DONE-Rule1  
 红球和值71，则杀7+1=08，所以杀红08
 
 * 备注：<https://jingyan.baidu.com/article/f3ad7d0ffdd71b09c3345b9f.html>
 
 -
-##### Rule2
+##### DONE-Rule2
 奖号对称码第三位+7，杀下期红球（大于33减33）
 
 -

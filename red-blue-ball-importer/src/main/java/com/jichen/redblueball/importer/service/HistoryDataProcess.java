@@ -39,7 +39,7 @@ public class HistoryDataProcess {
         history.setRed4(Integer.parseInt(redBallArray[3]));
         history.setRed5(Integer.parseInt(redBallArray[4]));
         history.setRed6(Integer.parseInt(redBallArray[5]));
-        history.setBlueBall(getBlueBallNumber(data));
+        history.setBlue(getBlueBallNumber(data));
         try {
             history.setDate(getDate(data));
         } catch (Exception e) {

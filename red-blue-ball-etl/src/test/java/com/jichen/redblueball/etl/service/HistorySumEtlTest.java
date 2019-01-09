@@ -3,7 +3,7 @@ package com.jichen.redblueball.etl.service;
 import com.jichen.redblueball.etl.mapper.HistoryEtlMapper;
 import com.jichen.redblueball.common.model.History;
 import com.jichen.redblueball.common.model.HistorySum;
-import com.jichen.redblueball.etl.service.history.HistorySumEtl;
+import com.jichen.redblueball.etl.service.history.SumEtl;
 import org.easymock.EasyMockRunner;
 import org.easymock.EasyMockSupport;
 import org.easymock.Mock;
@@ -21,7 +21,7 @@ import static org.easymock.EasyMock.expectLastCall;
 public class HistorySumEtlTest extends EasyMockSupport {
 
     @TestSubject
-    private HistorySumEtl sumEtl = new HistorySumEtl();
+    private SumEtl sumEtl = new SumEtl();
 
     @Mock
     private HistoryEtlMapper mapper;

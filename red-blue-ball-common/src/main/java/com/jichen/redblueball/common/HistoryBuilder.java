@@ -64,7 +64,7 @@ public final class HistoryBuilder {
         history.setRed4(red4);
         history.setRed5(red5);
         history.setRed6(red6);
-        history.setBlueBall(blueBall);
+        history.setBlue(blueBall);
         history.setNumber(this.number);
         history.setDate(this.date);
         return history;
