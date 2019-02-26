@@ -12,9 +12,9 @@ import static java.util.Collections.singleton;
 
 @Component
 @Killer(name = "blueBallACValuePrimeNumbersSumKiller", type = RED)
-public class BlueBallACValuePrimeNumbersSumKiller implements KillerService {
+public class BlueBallACValueSumKiller implements KillerService {
     @Override
     public Set<Integer> kill(History history) {
-        return singleton(history.getBlue() + history.getACValue() + history.getPrimeCount());
+        return singleton(history.getBlue() + history.getACValue());
     }
 }
