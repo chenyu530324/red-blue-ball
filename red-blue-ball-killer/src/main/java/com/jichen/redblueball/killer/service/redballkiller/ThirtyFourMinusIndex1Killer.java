@@ -9,11 +9,11 @@ import java.util.Set;
 import static com.jichen.redblueball.common.BallType.RED;
 import static java.util.Collections.singleton;
 
-@Killer(name = "index6SubtractIndex1", type = RED)
-public class Index6SubtractIndex1 implements KillerService {
+@Killer(name = "thirtyFourMinusIndex1Killer", type = RED)
+public class ThirtyFourMinusIndex1Killer implements KillerService {
 
+    @Override
     public Set<Integer> kill(History history) {
-        int killNumber = history.getRed6() - history.getRed1();
-        return singleton(killNumber);
+        return singleton(34 - history.getRed1());
     }
 }
